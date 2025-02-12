@@ -1,6 +1,6 @@
 print("ماشین‌حساب ساده")
 num1 = float(input("عدد اول را وارد کنید: "))
-operation = input("عملیات (جمع، تفریق، ضرب، تقسیم) را وارد کنید: ")
+operation = input("عملیات (جمع +، تفریق -، ضرب *، تقسیم /، توان **، باقی‌مانده %) را وارد کنید: ")
 num2 = float(input("عدد دوم را وارد کنید: "))
 
 if operation == "+":
@@ -12,6 +12,13 @@ elif operation == "*":
 elif operation == "/":
     if num2 != 0:
         result = num1 / num2
+    else:
+        result = "تقسیم بر صفر ممکن نیست!"
+elif operation == "**":
+    result = num1 ** num2
+elif operation == "%":
+    if num2 != 0 :
+        result = num1 % num2
     else:
         result = "تقسیم بر صفر ممکن نیست!"
 else:
